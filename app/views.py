@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("- This is the homepage -")
+	return render(request, 'app/home.html')
 
 def signup(request):
     return HttpResponse("- This is the sign up page -")
