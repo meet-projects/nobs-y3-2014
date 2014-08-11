@@ -5,16 +5,16 @@ def home(request):
 	return render(request, 'app/home.html')
 
 def signup(request):
-    return HttpResponse("- This is the sign up page -")
+    return render(request, 'app/signup.html')
 
 def search_results(request):
-    return HttpResponse("- This is the search results -")
+    return render(request, 'app/search_results.html')
 
 def video(request):
-    return HttpResponse("- This is the play video page -")
+    return render(request, 'app/video.html')
 
 def profile(request):
-    return HttpResponse("- This is the profile page -")
+    return render(request, 'app/profile.html')
 
 def upload(request):
-    return HttpResponse("- This is the upload page -")
+    return render(request, 'app/upload.html')
