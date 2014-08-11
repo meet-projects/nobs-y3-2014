@@ -6,7 +6,9 @@ def home(request):
 
 def signup(request):
 	context={'months':["January", "February", "March", "April", "May",
-	"June", "July", "August", "September", "October", "November", "December"]}	
+	"June", "July", "August", "September", "October", "November", "December"]}
+	context["days"] = range(1, 32)
+		context["years"] = range(1914, 2007)	
     return render(request, 'app/signup.html', context)
 
 def search_results(request):
