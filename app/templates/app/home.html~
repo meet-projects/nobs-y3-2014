@@ -1,13 +1,32 @@
-{% extends "base.html" %}
+{% extends "app/base.html" %}
 {% block title %}
 Home Title
 {% endblock %}
 
 {% block content  %}
-      <div class="jumbotron">
-        <h1>Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+
+<script>
+function initialize()
+{
+var mapProp = {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+var map=new google.maps.Map(document.getElementById("googleMap")
+  ,mapProp);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+      <div class="jumbotron" style = "background-color:>
+        <p class="lead"><div id="googleMap" style="width:693px;height:300px;margin-left:-57px;margin-top:-60px; border: 2px solid;"></div>
+</p>
+        <a class="btn btn-lg btn-success" href="#" role="button" style = "margin-bottom:-60px;margin-top:-27px;">Get videos based on area</a>
       </div>
 
       <div class="row marketing">

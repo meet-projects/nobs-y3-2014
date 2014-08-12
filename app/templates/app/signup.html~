@@ -1,24 +1,15 @@
-<!DOCTYPE html>
- 
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="" name="description">
-	<meta content="" name="author">
-	<link href="" rel="shortcut icon">
- 
-	<title>Sign Up page</title><!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="{{ STATIC_URL }}css/signup.css" rel="stylesheet">
-</head>
- 
-<body>
- 
-	<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
+{% extends "app/base.html" %}
+{% block title %}
+Home Title
+{% endblock %}
+
+{% block content  %}
+<style type="text/css">
+body { padding-top:30px; }
+.form-control { margin-bottom: 10px; }
+</style>
+<div class="container" style =  "margin-left:auto;margin-right:auto;text-align:center;">
+        <div class="col-xs-12 col-sm-12 col-md-4 well well-sm" style="width:440px;margin-left:120px;">
             <legend><a href="http://www.jquery2dotnet.com"><i class="glyphicon glyphicon-globe"></i></a> Sign up!</legend>
             <form action="#" method="post" class="form" role="form">
             <div class="row">
@@ -33,33 +24,22 @@
             <input class="form-control" name="youremail" placeholder="Your Email" type="email" />
             <input class="form-control" name="reenteremail" placeholder="Re-enter Email" type="email" />
             <input class="form-control" name="password" placeholder="New Password" type="password" />
-            <input class="form-control" name="password" placeholder="Confirm Password" type="password" />
+            <label for="">
+                Birth Date</label>
             <div class="row">
-            	 <label for="">
-                Birth Date
-            </label>
                 <div class="col-xs-4 col-md-4">
                     <select class="form-control">
                         <option value="Month">Month</option>
-                        	{% for month in months %}
-                        	<option value="{{month}}">{{month}}</option>
-                        	{% endfor %}
                     </select>
                 </div>
                 <div class="col-xs-4 col-md-4">
                     <select class="form-control">
                         <option value="Day">Day</option>
-                        	{% for day in days %}
-                        	<option value="{{day}}">{{day}}</option>
-                        	{% endfor %}
                     </select>
                 </div>
                 <div class="col-xs-4 col-md-4">
                     <select class="form-control">
                         <option value="Year">Year</option>
-                        {% for year in years %}
-                        	<option value="{{year}}">{{year}}</option>
-                        	{% endfor %}
                     </select>
                 </div>
             </div>
@@ -77,7 +57,34 @@
                 Sign up</button>
             </form>
         </div>
-    </div>
 </div>
-</body>
-</html>										
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Subheading</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Subheading</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        </div>
+      </div>
+{% endblock %}
+
+
+
+
+
