@@ -136,4 +136,16 @@ margin: 23 auto;
 display:block;
 }
 
+div#DownBar
+{
+background-color:4F81BD;
+position:absolute;
+bottom:0;
+width:100%;
+height:20px;
+}
 
+p#copyright
+{
+color:white
+}
