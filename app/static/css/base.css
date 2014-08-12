@@ -19,6 +19,20 @@ margin-right:30px;
 
 h1{color:white}
 
+td#Logo
+{
+float:center;
+}
+
+
+
+img#logo
+{
+width=100px;
+height=100px;
+}
+
+
 button#HomePage
 {
 background-color:F79646;

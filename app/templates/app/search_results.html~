@@ -14,7 +14,7 @@
 
 
 <div id="SearchResults">
-dddddddddd
+<p1>You Searched For:</p>
 </div>
 
 {% endblock %}
