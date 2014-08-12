@@ -1,4 +1,42 @@
-<html>
-<head><title>Home Page</title></head>
-<body>-This is the homepage template-</body>
-</html>
+{% extends "app/base.html" %}
+{% block title %}
+Home Title
+{% endblock %}
+
+{% block content  %}
+      <div class="jumbotron">
+        <style>
+.uploadinput{
+	float:right;
+}
+button{
+	background:FF9900 ;
+}
+
+</style>
+</head>
+<body>
+<h1 style="text-align:left;"><em>Upload page</em></h1>
+<div id="content" style="background-color:#FFFFFF;height:150px;width:300px;float:center;">
+<form>	
+<div class='field_div'>Title:<input class="uploadinput" type="text" name="Title"></div><br/>
+<div class='field_div'>Hashtags: <input class="uploadinput" type="text" name="Hashtags"></div><br/>
+<div class='field_div'>
+</form>
+
+<input type="file"><em>choose a file</em>
+<input type = "submit"> Upload
+</div>
+
+
+
+      
+
+
+      </div>
+{% endblock %}
+
+
+
+
+
