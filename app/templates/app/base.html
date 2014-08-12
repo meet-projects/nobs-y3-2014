@@ -23,8 +23,13 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
-href="/home/student/Desktop/nobs-y3-2014/app/static/css/base.css">
-
+href="{{ STATIC_URL }}css/base.css">
+<title> 
+{% block title %}
+{% endblock %}
+</title>
+{% block headers %}
+{% endblock %}
 
 <div id="MainBar">
 <table id="MainBar">
@@ -66,6 +71,8 @@ href="/home/student/Desktop/nobs-y3-2014/app/static/css/base.css">
 
 </div>
 
+{% block content %}
+{% endblock %}
 
 </body>
 
