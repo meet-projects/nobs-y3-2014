@@ -1,0 +1,80 @@
+<html>
+
+<head>
+
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+
+<script>
+function initialize()
+{
+var mapProp = {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+var map=new google.maps.Map(document.getElementById("googleMap")
+  ,mapProp);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+href="{{ STATIC_URL }}css/base.css">
+<title> 
+{% block title %}
+{% endblock %}
+</title>
+{% block headers %}
+{% endblock %}
+
+<div id="MainBar">
+<table id="MainBar">
+
+<tr>
+<td id="Logo"><h1><img src="url" alt="Logo"></h1></td>
+<td id="HomePage"><button  type="button" id="HomePage" class="btn btn-default">Home Page</button></td>
+<td id="LogOut"><button type="button" id="LogOut" class="btn btn-default">Log Out</button></td>
+<td id="Profile"><button type="button" id="Profile" class="btn btn-default">Profile</button></td>
+<td id="Upload"><button type="button" id="Upload" class="btn btn-default">Upload</button></td>
+<!--<td id="Picture">picture</td>-->
+</tr>
+
+</table>
+</div>
+
+<img id="picture" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSu9iR8MisncrgwmLUPweB4GdPgAXGj18muaWKF70D2IgXmiUpBlA" alt="some_text" width=120px height=120px>
+
+
+</head>
+
+<body>
+<div id="SearchBar" width="300px">
+<input type="text" class="form-control" placeholder="search frealy" id="SearchEngine">
+
+<p id="or">OR</p>
+<div id="googleMap" style="width:250px;height:180px;"></div>
+
+<p id="or">OR</p>
+
+<table id="ChooseUserName">
+<tr>
+<td><p id="ChooseUserName">Choose a Username:</p></td>
+<td><input type="text" class="form-control" id="ChooseUserName"></td>
+</tr>
+</table>
+
+<button  type="button" id="Search" class="btn btn-default">Search</button>
+
+</div>
+
+{% block content %}
+{% endblock %}
+
+</body>
+
+</html>
+

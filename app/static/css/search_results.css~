@@ -3,7 +3,7 @@ div#SearchResults
 width:600px;
 height:400px;
 background-color:AFC7EF;
-margin-left:400px;
+margin-left:600px;
 margin-top:0px;
 border: 2px solid;
 border-radius: 25px;

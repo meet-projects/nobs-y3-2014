@@ -1,0 +1,20 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+{% endblock %}
+
+
+{% block headers %}
+<link rel = "stylesheet" href = "{{ STATIC_URL }}css/search_results.css">
+{% endblock %}
+
+{% block content %}
+
+<p id="SearchResultsTitle">Search Results</p>
+
+
+<div id="SearchResults">
+dddddddddd
+</div>
+
+{% endblock %}
