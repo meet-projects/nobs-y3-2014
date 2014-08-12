@@ -1,4 +1,14 @@
 <html>
 <head><title>Video</title></head>
-<body>-This is the homepage template-</body>
+<body>-This is the video template-
+<br>
+<video width="320" height="240" controls>
+  <source src="123abc.mp4" type="video/mp4">
+  <source src="123abc.ogg" type="video/ogg">
+  <source src="123abc.webm" type="video/webm">
+  <object data="123abc.mp4" width="320" height="240">
+    <embed src="123abc.swf" width="320" height="240">
+  </object>
+</video> 
+</body>
 </html>

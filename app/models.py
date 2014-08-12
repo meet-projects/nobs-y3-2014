@@ -8,14 +8,14 @@ class Video(models.Model):
 	uploader = models.ForeignKey(User)
 	date = models.DateField()
 	
-class Profile(models.Model):
+#class Profile(models.Model):
 	#def get_code:
-        user = models.OneToOneField(User)
-	email = models.CharField(max_length = 200)
-        name = models.CharField(max_length = 40)
-        userName = models.CharField(max_length = 40)
-        day = models.IntegerField()
-	month = models.IntegerField()
-        year = models.IntegerField(label=u'year')
-	gender = forms.CharField(label=u'gender')
+        #user = models.OneToOneField(User)
+	#email = models.CharField(max_length = 200)
+        #name = models.CharField(max_length = 40)
+        #userName = models.CharField(max_length = 40)
+        #day = models.IntegerField()
+	#month = models.IntegerField()
+        #year = models.IntegerField(label=u'year')
+	#gender = forms.CharField(label=u'gender')
 ##        photo = models.ImageField(upload_to = "books/static/images")

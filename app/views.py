@@ -5,47 +5,47 @@ from django import forms
 from django.contrib.auth.models import User
 
 def home(request):
-	return render(request, 'app/home.html')
+        return render(request, 'app/home.html')
 
 def signup(request):
-	context={'months':["January", "February", "March", "April", "May",
+        context={'months':["January", "February", "March", "April", "May",
 	"June", "July", "August", "September", "October", "November", "December"]}
-	context["days"] = range(1, 32)
-		context["years"] = range(1914, 2007)
-	context['form']: UserRegistrationForm()
-    return render(request, 'app/signup.html', context)
+        context["days"] = range(1, 32)
+	context["years"] = range(1914, 2007)
+        context['form'] = UserRegistrationForm()
+        return render(request, 'app/signup.html', context)
 
 class UserRegistrationForm(forms.Form):
-	 first_name = forms.CharField(label=u'first_name')
-	 last_name = forms.CharField(label=u'last_name')
-	 email = forms.CharField(label=u'Email')
-	 userName = forms.CharField(label=u'userName')
-	 password = forms.CharField(label=u'password',widget=forms.PasswordInput)
-	 day = forms.IntegerField(label=u'day')
-	 month = forms.IntegerField(label=u'month')
-	 year = forms.IntegerField(label=u'year')
-	 gender = forms.CharField(label=u'gender')
-	
+        first_name = forms.CharField(label=u'first_name')
+        last_name = forms.CharField(label=u'last_name')
+        email = forms.CharField(label=u'Email')
+        userName = forms.CharField(label=u'userName')
+        password = forms.CharField(label=u'password',widget=forms.PasswordInput)
+        day = forms.IntegerField(label=u'day')
+        month = forms.IntegerField(label=u'month')
+        year = forms.IntegerField(label=u'year')
+        gender = forms.CharField(label=u'gender')
+
 	 ##password_again = forms.CharField(label=u'password_again',widget=forms.PasswordInput)
 
 
 def register(request):
-	form = UserRegistrationForm(request.POST)
-	if form.is_valid():
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
 	#TODO Add functionality to save
-		email = form.cleaned_data['email']
-		userName = form.cleaned_data['userName']
-		first_name = form.cleaned_data['first_name']
-		last_name = form.cleaned_data['last_name']
-		password = form.cleaned_data['password']
-		day = form.cleaned_data['day']
-		month = form.cleaned_data['month']
-		year = form.cleaned_data['year']
-		gender = form.cleaned_data['gender']
-		##password_again = form.cleaned_data['password_again']
-		##if password != password_again:
-		##	return render(request, 'books/signup.html', {'form': UserRegistrationForm(), 'message': 'passwords did not match' })
-		if len(User.objects.filter(username = userName)):
+                email = form.cleaned_data['email']
+                userName = form.cleaned_data['userName']
+                first_name = form.cleaned_data['first_name']
+                last_name = form.cleaned_data['last_name']
+                password = form.cleaned_data['password']
+                day = form.cleaned_data['day']
+                month = form.cleaned_data['month']
+                year = form.cleaned_data['year']
+                gender = form.cleaned_data['gender']
+                ##password_again = form.cleaned_data['password_again']
+                ##if password != password_again:
+                ##	return render(request, 'books/signup.html', {'form': UserRegistrationForm(), 'message': 'passwords did not match' })
+                if len(User.objects.filter(username = userName)):
 			return render(request, 'app/signup.html', {'form': UserRegistrationForm(), 'message': 'ERROR: email already exists' })
 		elif "" in [email,  password, day, year, gender, month] or first_name == "" or last_name == "":
 			return render(request, 'app/signup.html', {'form': UserRegistrationForm(), 'message': 'all fields should be filled' })
