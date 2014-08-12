@@ -71,3 +71,19 @@ def profile(request):
 
 def upload(request):
     return render(request, 'app/upload.html')
+
+
+
+def submitlogout(request):
+	logout(request)
+	return HttpResponseRedirect("home")
+
+
+def submitlogin(request):
+
+	Email = request.POST['email']
+	Password = request.POST['password']
+	user = authenticate(email=Email, password=Password)
+	login(request, user)
+	context = {'user': request.user}
+	return my_render(request, 'books/homepage.html', context)
