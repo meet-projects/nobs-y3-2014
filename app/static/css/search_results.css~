@@ -27,5 +27,16 @@ color:F79646;
 table#events
 {
 border-collapse: separate;
-border-spacing: 27px 27px;
+border-spacing: 29px 29px;
+}
+
+p#dis
+{
+font-weight:bold;
+}
+
+div#SearchResults
+{
+height:400px;
+overflow-y:scroll;
 }
