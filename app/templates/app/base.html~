@@ -27,7 +27,7 @@ href="{{ STATIC_URL }}css/base.css">
 <title> 
 {% block title %}
 {% endblock %}
-
+</title>
 {% block headers %}
 {% endblock %}
 
@@ -52,7 +52,7 @@ href="{{ STATIC_URL }}css/base.css">
 </head>
 
 <body>
-<div id="SearchBar">
+<div id="SearchBar" width="300px">
 <input type="text" class="form-control" placeholder="search frealy" id="SearchEngine">
 
 <p id="or">OR</p>

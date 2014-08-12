@@ -62,8 +62,8 @@ width:150;
 div#SearchBar
 {
 background-color:4F81BD;
-width:300;
-height:480;
+width:100px;
+height:480px;
 border: 2px solid;
 border-radius: 25px;
 margin:20px;
@@ -121,3 +121,5 @@ width: 50%;
 margin: 23 auto;
 display:block;
 }
+
+
