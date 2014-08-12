@@ -4,33 +4,21 @@ Home Title
 {% endblock %}
 
 {% block content  %}
-      <div class="jumbotron">
-        <h1>Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      <div class="jumbotron" style="background-color:white">
+<video width="500" height="350" style="width:693px;height:400px;margin-left:-57px;margin-top:-60px; border: 2px solid;background-color:black">
+  <source src="{{ STATIC_URL }}videos/123abc.mp4" type="video/mp4">
+  <source src="{{ STATIC_URL }}videos/123abc.ogg" type="video/ogg">
+  <source src="{{ STATIC_URL }}videos/123abc.webm" type="video/webm">
+  <object data="{{ STATIC_URL }}videos/123abc.mp4" width="320" height="240">
+    <embed src="{{ STATIC_URL }}videos/123abc.mp4" width="320" height="240">
+  </object>
+</video> 
       </div>
 
       <div class="row marketing">
         <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+          <h4>Video Details, etc</h4>
+          <p>Views: 124151<br>Description: blabla<br>Rating: 6.7</p>
         </div>
       </div>
 {% endblock %}
