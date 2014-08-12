@@ -23,3 +23,20 @@ margin:30px;
 font-size:18px;
 color:F79646;
 }
+
+table#events
+{
+border-collapse: separate;
+border-spacing: 29px 29px;
+}
+
+p#dis
+{
+font-weight:bold;
+}
+
+div#SearchResults
+{
+height:400px;
+overflow-y:scroll;
+}
