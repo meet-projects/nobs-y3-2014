@@ -121,8 +121,3 @@ width: 50%;
 margin: 23 auto;
 display:block;
 }
-
-div#DownBar
-{
-background-color:4F81BD;
-}
