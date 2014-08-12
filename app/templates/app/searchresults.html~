@@ -1,0 +1,13 @@
+<html>
+
+<head>
+
+{% extends 'base.html' %}
+
+</head>
+
+<body>
+</body>
+
+
+</html>
