@@ -1,85 +1,63 @@
-<html>
 
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
-</script>
-
-<script>
-function initialize()
-{
-var mapProp = {
-  center:new google.maps.LatLng(51.508742,-0.120850),
-  zoom:5,
-  mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-var map=new google.maps.Map(document.getElementById("googleMap")
-  ,mapProp);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
-
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css"
-href="{{ STATIC_URL }}css/base.css">
-<title> 
+    <title>
 {% block title %}
-{% endblock %}
-</title>
-{% block headers %}
-{% endblock %}
+{% endblock %}</title>
 
-<div id="MainBar">
-<table id="MainBar">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
 
-<tr>
-<td id="Logo"><h1><img src="{{ STATIC_URL }}image/logo.png" alt="Logo" width=300px height=60px></h1></td>
-<td id="HomePage"><button  type="button" id="HomePage" class="btn btn-default">Home Page</button></td>
-<td id="LogOut"><button type="button" id="LogOut" class="btn btn-default">Log Out</button></td>
-<td id="Profile"><button type="button" id="Profile" class="btn btn-default">Profile</button></td>
-<td id="Upload"><button type="button" id="Upload" class="btn btn-default">Upload</button></td>
-<!--<td id="Picture">picture</td>-->
-</tr>
+    <!-- Custom styles for this template -->
+    <link href="{{ STATIC_URL }}css/css_stuff.css" rel="stylesheet">
 
-</table>
-</div>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
-<img id="picture" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSu9iR8MisncrgwmLUPweB4GdPgAXGj18muaWKF70D2IgXmiUpBlA" alt="some_text" width=120px height=120px>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-</head>
+  <body>
 
-<body>
-<div id="SearchBar">
-<input type="text" class="form-control" placeholder="search frealy" id="SearchEngine">
-
-<p id="or">OR</p>
-<div id="googleMap" style="width:250px;height:180px;"></div>
-
-<p id="or">OR</p>
-
-<table id="ChooseUserName">
-<tr>
-<td><p id="ChooseUserName">Choose a Username:</p></td>
-<td><input type="text" class="form-control" id="ChooseUserName"></td>
-</tr>
-</table>
-
-<button  type="button" id="Search" class="btn btn-default">Search</button>
-
-</div>
-
-
-<div id="DownBar">
-<p id="copyright" align=center>Copyright © NoBS Team</p>
-</div>
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">No Bias, No Bull</h3>
+      </div>
 
 {% block content %}
 {% endblock %}
 
-</body>
 
+      <div class="footer">
+        <p>Copyright &copy; NoBS Team 2014</p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
 </html>
-
