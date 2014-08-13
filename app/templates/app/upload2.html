@@ -1,0 +1,32 @@
+{% extends "app/base.html" %}
+{% block title %}
+Home Title
+{% endblock %}
+
+{% block content  %}
+      <div class="jumbotron">
+        <h1>Jumbotron heading</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      </div>
+
+      
+          <h1 style="text-align:left;"><em>Upload page</em></h1>
+<div id="content" style="background-color:AFC7EF;height:150px;width:300px;float:center;">
+<form>	
+<div class='field_div'>Title:<input class="uploadinput" type="text" name="Title"></div><br/>
+<div class='field_div'>Hashtags: <input class="uploadinput" type="text" name="Hashtags"></div><br/>
+<div class='field_div'>Browse: <input class="uploadinput" type="text" name="Browse"></div>
+</form>
+
+<button type="button"><em>Upload</em></button>
+</div>
+
+<div id="includedContent"></div>
+
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+
+      </div>
+{% endblock %}
+
