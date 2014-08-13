@@ -26,7 +26,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <div class="jumbotron" style = "background-color:white">
         <p class="lead"><div id="googleMap" style="width:693px;height:300px;margin-left:-57px;margin-top:-60px; border: 2px solid;"></div>
 </p>
-        <a class="btn btn-lg btn-warning" href="#" role="button" style = "margin-bottom:-60px;margin-top:-27px;">Get videos based on area</a>
+        <a class="btn btn-lg btn-warning" href="/search_results/Russia-and-Ukraine" role="button" style = "margin-bottom:-60px;margin-top:-27px;">Get videos based on area</a>
       </div>
 
       <div class="row marketing">

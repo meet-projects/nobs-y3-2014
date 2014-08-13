@@ -5,6 +5,7 @@ from django import forms
 from django.contrib.auth.models import User
 
 def home(request):
+	context = {'logged':false}
         return render(request, 'app/home.html')
 
 def signup(request):
@@ -13,6 +14,7 @@ def signup(request):
         context["days"] = range(1, 32)
 	context["years"] = range(1914, 2007)
         context['form'] = UserRegistrationForm()
+	context['logged'] = false
         return render(request, 'app/signup.html', context)
 
 class UserRegistrationForm(forms.Form):
@@ -83,7 +85,7 @@ def submitlogin(request):
 
 	Email = request.POST['email']
 	Password = request.POST['password']
-	user = authenticate(username=Email, password=Password)
+	user = authenticate(email=Email, password=Password)
 	login(request, user)
 	context = {'user': request.user}
 	return my_render(request, 'books/homepage.html', context)
