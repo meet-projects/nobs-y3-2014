@@ -4,29 +4,36 @@ Home Title
 {% endblock %}
 
 {% block content  %}
-      <div class="jumbotron">
-        <style>
-.uploadinput{
-	float:right;
-}
-button{
-	background:FF9900 ;
-}
-
+<style type="text/css">
+body { padding-top:30px; }
+.form-control { margin-bottom: 10px; }
 </style>
-</head>
-<body>
-<h2 style="text-align:left;"><em>Upload page</em></h2>
-<div id="content" style="background-color:#FFFFFF;height:150px;width:300px;float:center;">
-<form>	
-<div class='field_div'>Title:<input class="uploadinput" type="text" name="Title"></div><br/>
-<div class='field_div'>Hashtags: <input class="uploadinput" type="text" name="Hashtags"></div><br/>
-<div class='field_div'>
-</form>
+<div class="container" style =  "margin-left:auto;margin-right:auto;text-align:center;">
+        <div class="col-xs-12 col-sm-12 col-md-4 well well-sm" style="width:440px;margin-left:120px;">
+            <legend><a href="http://www.jquery2dotnet.com"><i class="glyphicon glyphicon-globe"></i></a> Upload a Video!</legend>
+            <form action="#" method="post" class="form" role="form">
+            
+            <input class="form-control" name="videoTitle" placeholder="Title" type="text" />
+            <input class="form-control" name="tags" placeholder="Tags" type="text" />
+           <input class = "form-control" type="file">
 
-<input type="file"><em>choose a file</em>
-<input type = "submit"> Upload
+
+            <br />
+            
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                Upload!</button>
+            </form>
+        </div>
 </div>
+
+
+
+
+
+
+
+<div id="content" style="background-color:#FFFFFF;height:150px;width:300px;float:center;">
+
 
 
 

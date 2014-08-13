@@ -44,7 +44,7 @@
 
           <li ><a href="/" style = "margin-right:10px;">Home</a></li>
 
-          <li><a href="/Profile">Profile</a></li>
+          <li><a href="/profile">Profile</a></li>
           <li><a href="/Upload">Upload</a></li>
           <li><a href="/logout">Logout</a></li>
 
@@ -52,7 +52,7 @@
 	<li><input type = "email" id = "email" name = "email" style = "margin-right:-5px;border-radius: 7px;height:25px;width:150px;" placeholder = "Email">
 
 <br><input type = "password" id = "password" name = "password" style = "margin-top:4px;margin-right:-5px;border-radius: 7px;height:25px;width:150px;" placeholder = "Password"></li>
-<li ><a href="#" style = "height:30px;padding:5px;" class="active">Login</a>
+<li ><a href="/submitlogin" style = "height:30px;padding:5px;" class="active">Login</a>
 <a href="/signup" style = "height:30px;padding:5px;">Sign Up</a></li>
 {% endif %}
 
