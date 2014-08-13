@@ -23,33 +23,60 @@ var map=new google.maps.Map(document.getElementById("googleMap")
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
-      <div class="jumbotron" style = "background-color:>
+      <div class="jumbotron" style = "background-color:white">
         <p class="lead"><div id="googleMap" style="width:693px;height:300px;margin-left:-57px;margin-top:-60px; border: 2px solid;"></div>
 </p>
-        <a class="btn btn-lg btn-success" href="#" role="button" style = "margin-bottom:-60px;margin-top:-27px;">Get videos based on area</a>
+        <a class="btn btn-lg btn-warning" href="#" role="button" style = "margin-bottom:-60px;margin-top:-27px;">Get videos based on area</a>
       </div>
 
       <div class="row marketing">
         <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+<p style="font-weight: bold;">Recently Popular</p>
+            <table style="border-collapse: separate;border-spacing: 10px 10px;">
+              <tr>
+                <td> <img src="{{ STATIC_URL }}image/videoPic1.png" alt ="Israeli Protest in NYC" width="130" height="100"> </td>
+                <td> Pro-Israeli Protest in NYC <br> Uploader: OmriDoron </br> <br>18,829 views | 8.1 25/07/14 </br> </td>
+              </tr>
+            </table>
+        
+          <table style="border-collapse: separate;border-spacing: 10px 10px;">
+              <tr>
+                <td> <img src="{{ STATIC_URL }}image/pic1.jpeg" alt ="Pro Russian protest in Rome" width="130" height="100"> </td>
+                <td> Pro Russian protest in Rome <br> Uploader: YashaK </br> <br>121,342 views | 7.9 12/08/14 </br> </td>
+              </tr>
+            </table>
 
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+          <table style="border-collapse: separate;border-spacing: 10px 10px;">
+              <tr>
+                <td> <img src="{{ STATIC_URL }}image/lilboy.jpg" alt ="Little Boy Rushed to Hospital After House is Bombed" width="130" height="100"> </td>
+                <td> Kid Rushed to Hospital After House is Bombed <br> Uploader: MarkSalem </br> <br>59,673 views | 7.3 1/08/14 </br> </td>
+              </tr>
+            </table>
         </div>
-
+       
         <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+<p  style="font-weight: bold;">Top Rated</p>
+          <table style="border-collapse: separate;border-spacing: 10px 10px;">
+              <tr>
+                <td> <img src="{{ STATIC_URL }}image/IDFinjured.jpg" alt ="IDF Soldier got Injured" width="130" height="100"> </td>
+                <td> IDF Soldier after getting Injured <br> Uploader: SajaHriesh </br> <br>72,893 views | 6.2 26/07/14 </br> </td>
+              </tr>
+            </table>
 
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+          <table style="border-collapse: separate;border-spacing: 10px 10px;">
+              <tr>
+                <td> <img src="{{ STATIC_URL }}image/pic7.jpg" alt ="Reporter Runs onto Field during World Cup" width="130" height="100"> </td>
+                <td> Reporter runs onto Field during World Cup <br> Uploader: JackTre </br> <br>55,433 views | 6.8 15/07/14 </br> </td>
+              </tr>
+            </table>
+       
+          <table style="border-collapse: separate;border-spacing: 10px 10px;">
+              <tr>
+                <td> <img src="{{ STATIC_URL }}image/pic6.jpeg" alt="Russian Forced Deployed in Ukraine" width="130" height="100"> </td>
+                <td> Russian Forced Deployed in Ukraine <br> Uploader: JackTre </br> <br>49,732 views | 5.5 17/07/14 </br> </td>
+              </tr>
+            </table>
         </div>
       </div>
 {% endblock %}
