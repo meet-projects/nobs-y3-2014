@@ -4,8 +4,9 @@ Home Title
 {% endblock %}
 
 {% block content  %}
+<link rel = "stylesheet" href = "{{ STATIC_URL }}css/social-buttons.css">
       <div class="jumbotron" style="background-color:white">
-<video width="500" height="350" style="width:693px;height:400px;margin-left:-57px;margin-top:-60px; border: 2px solid;background-color:black">
+<video width="500" height="350" style="width:693px;height:400px;margin-left:-57px;margin-top:-60px; border: 2px solid;background-color:black" controls>
   <source src="{{ STATIC_URL }}videos/123abc.mp4" type="video/mp4">
   <source src="{{ STATIC_URL }}videos/123abc.ogg" type="video/ogg">
   <source src="{{ STATIC_URL }}videos/123abc.webm" type="video/webm">
@@ -15,29 +16,29 @@ Home Title
 </video> 
       </div>
 
-      <div class="row marketing">
+      <div class="row marketing" style = "margin-top:-60px;">
         <div class="col-lg-6">
-          <h4>Video Details, etc</h4>
-          <p>Views: 124151<br>Description: blabla<br>Rating: 6.7</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+<<<<<<< HEAD
+          <h4>Ukraine Riot</h4>
+          <p>Uploader: RonLipel<br>Views: 124,151<br>Rating: 6.7<br>Tags: #ukraine #violence #annexation #crimea #kiev </p>
         </div>
       </div>
+<div class="row">
+                <div class="span4 pull-center">
+                    <button class="btn btn-facebook" style = "margin-bottom:10px;"><i class="fa fa-facebook"></i> | Share with Facebook</button><br>
+                    <button class="btn btn-twitter"><i class="fa fa-twitter"></i> | Share with Twitter</button><br>
+
+                    <button class="btn btn-pinterest"><i class="fa fa-pinterest"></i> | Share with Pinterest</button><br>
+
+                    <button class="btn btn-google-plus"><i class="fa fa-google-plus"></i> | Share with Google Plus</button><br>
+                    <button class="btn btn-instagram"><i class="fa fa-camera-retro"></i> | Share with Instagram</button>
+                </div>
+=======
+          <h4>Video Details, etc</h4>
+          <p>Views: 124151<br>Description: blabla<br>Rating: 6.7</p>
+        </div>
+      </div>
+>>>>>>> 73a6e2cc7dbfc19682e2a17b64690ae7c4953194
 {% endblock %}
 
 
