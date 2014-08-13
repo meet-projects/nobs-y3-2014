@@ -43,11 +43,7 @@
 </li>
 
           <li ><a href="/" style = "margin-right:10px;">Home</a></li>
-{% if logged %}
-          <li><a href="/profile">Profile</a></li>
-          <li><a href="/upload">Upload</a></li>
-          <li><a href="/logout">Logout</a></li>
-{% else %}
+{% if notLogged %}
 
 	<li><input type = "email" id = "email" name = "email" style = "margin-right:-5px;border-radius: 7px;height:25px;width:150px;" placeholder = "Email">
 
@@ -55,11 +51,16 @@
 <div>not registered? <a href="/signup" style = "height:30px;padding:5px;">Sign Up!</a></div></li>
 <li ><a href="/submitlogin" style = "height:60px;padding-top:10px;padding-left:5px;padding-right:5px; padding-bottom:10px;" class="active">Login</a>
 </li>
+          
+{% else %}
+<li><a href="/profile">Profile</a></li>
+          <li><a href="/upload">Upload</a></li>
+          <li><a href="/logout">Logout</a></li>
 {% endif %}
 
 
         </ul>
-	<a><img src = "{{ STATIC_URL }}image/newLogo2.jpeg" style = "width:190px;height:65px;margin-right:10px;"></a>
+	<a href = "/"><img src = "{{ STATIC_URL }}image/newLogo2.jpeg" style = "width:190px;height:65px;margin-right:10px;"></a>
         <h3 class="text-muted"></h3>
       </div>
 
